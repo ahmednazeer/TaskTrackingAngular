@@ -12,6 +12,7 @@ import {TasksComponent} from "./Tasks/tasks.component";
 import {ReactiveFormsModule} from "@angular/forms";
 import { NoSelectedTaskComponent } from './tasks/no-selected-task/no-selected-task.component';
 import { AddTaskComponent } from './Tasks/task-add/add-task.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AddTaskComponent } from './Tasks/task-add/add-task.component';
     TaskEditComponent,
     NoSelectedTaskComponent,
     AddTaskComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
