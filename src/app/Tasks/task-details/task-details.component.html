@@ -1,0 +1,51 @@
+<div ><!--*ngIf="isSelected"-->
+<div class="row">
+  <div class="col-xs-12">
+    <h3 class="text-center text-info">{{task.Title}}</h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h3>Assigned By : {{task['AssigneeName']}}</h3>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-xs-12">
+    <h4>For Project : {{task.Project.Name}}</h4>
+  </div>
+</div>
+  <hr/>
+<div class="row">
+  <div class="col-xs-12">
+    <p>{{task.Details}}</p>
+  </div>
+</div>
+
+  <hr/>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h5 class="text-right text-danger">Delivered at : {{task.DeliveryDate}}</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="OnEditTask()" style="margin: 10px;">Edit Task</button>
+      <button class="btn btn-primary" (click)="OnDeleteTask()" style="margin: 10px;">Delete Task</button>
+    </div>
+  </div>
+
+</div>
+
+
+<!--
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{task.Title}}</h1>
+  </div>
+</div>
+-->

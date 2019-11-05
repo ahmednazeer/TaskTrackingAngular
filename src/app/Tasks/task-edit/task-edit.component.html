@@ -1,0 +1,94 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form (ngSubmit)="onSubmit()" [formGroup]="taskForm">
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="btn btn-success" type="submit" [disabled]="!taskForm.valid">Save</button>
+          <button class="btn btn-danger" type="button" (click)="onCancel()">Cancel</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="assignee">Title</label>
+            <input
+              class="form-control"
+              type="text"
+              id="title"
+              formControlName="title"
+            >
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="assignee">By</label>
+            <input
+              class="form-control"
+              type="text"
+              id="assignee"
+              formControlName="assignee"
+            >
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="date">Delivery Date</label>
+            <input
+              class="form-control"
+              type="date"
+              id="date"
+              formControlName="date"
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="ProjectId" style="margin: 5px;">Select Project</label>
+            <select formControlName="ProjectId" id="ProjectId" class="">
+
+              <option *ngFor="let project of projects " [value]="project.ID">{{project.Name}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="details">Details</label>
+            <textarea
+              class="form-control"
+              id="details"
+              rows="6"
+              formControlName="details"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+
+
+      <hr>
+      <!--
+      <div class="row">
+        <div class="col-xs-12">
+          <button type="button" class="btn btn-success" (click)="onAddIngredient()">Add Ingredient</button>
+        </div>
+      </div>
+      -->
+    </form>
+  </div>
+</div>
